@@ -1,0 +1,27 @@
+[package]
+name = "testkit"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+license = "MIT OR Apache-2.0"
+description = "Shared test utilities for Rust — test databases, HTTP servers, auth helpers, and assertions"
+repository = "https://github.com/WyattAu/testkit"
+keywords = ["test", "testing", "utilities", "mock"]
+categories = ["development-tools::testing"]
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+axum = "0.8"
+tower = "0.5"
+tower-http = { version = "0.6", features = ["cors", "trace"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+uuid = { version = "1", features = ["v4"] }
+chrono = { version = "0.4", features = ["serde"] }
+tempfile = "3"
+portable-atomic = "1"
+rusqlite = { version = "0.31", features = ["bundled"] }
+jsonwebtoken = "9"
+
+[dev-dependencies]
+reqwest = { version = "0.12", features = ["json"] }
