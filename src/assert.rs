@@ -15,7 +15,11 @@ macro_rules! assert_contains {
 #[macro_export]
 macro_rules! assert_error {
     ($result:expr) => {
-        assert!($result.is_err(), "Expected error, got Ok({:?})", $result.unwrap());
+        assert!(
+            $result.is_err(),
+            "Expected error, got Ok({:?})",
+            $result.unwrap()
+        );
     };
 }
 

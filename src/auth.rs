@@ -1,8 +1,8 @@
 /// Generate a test JWT token with default claims.
 pub fn test_jwt(user_id: &str) -> String {
-    use jsonwebtoken::{encode, Header, EncodingKey};
+    use chrono::{Duration, Utc};
+    use jsonwebtoken::{encode, EncodingKey, Header};
     use serde::{Deserialize, Serialize};
-    use chrono::{Utc, Duration};
 
     #[derive(Debug, Serialize, Deserialize)]
     struct TestClaims {

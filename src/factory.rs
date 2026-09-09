@@ -2,7 +2,10 @@ use chrono::Utc;
 
 /// Generate a test email address.
 pub fn test_email() -> String {
-    format!("test-{}@example.com", &uuid::Uuid::new_v4().to_string()[..8])
+    format!(
+        "test-{}@example.com",
+        &uuid::Uuid::new_v4().to_string()[..8]
+    )
 }
 
 /// Generate a test username.

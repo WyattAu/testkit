@@ -1,6 +1,9 @@
+// Test code: unwrap is the idiomatic way to assert assumptions.
+#![allow(clippy::unwrap_used)]
+
 use testkit::db::TestDb;
-use testkit::{auth, factory};
 use testkit::{assert_contains, assert_error, assert_ok_eq};
+use testkit::{auth, factory};
 
 #[test]
 fn test_db_creation() {
@@ -32,5 +35,8 @@ fn test_email_generation() {
 fn test_assert_macros() {
     assert_contains!("hello world", "world");
     assert_error!(Err::<String, _>("error"));
-    assert_ok_eq!(Ok::<String, String>("hello".to_string()), "hello".to_string());
+    assert_ok_eq!(
+        Ok::<String, String>("hello".to_string()),
+        "hello".to_string()
+    );
 }

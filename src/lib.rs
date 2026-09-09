@@ -6,13 +6,17 @@
 //! Provides test database setup, HTTP test servers, authentication helpers,
 //! and assertion utilities for consistent testing across projects.
 
-/// Test database setup and management.
-pub mod db;
-/// Test HTTP server utilities.
-pub mod http;
-/// Test authentication helpers.
-pub mod auth;
+// This crate *is* test scaffolding: fixtures that panic via expect/unwrap
+// on setup failure are the intended contract for test helpers.
+#![allow(clippy::expect_used, clippy::unwrap_used)]
+
 /// Custom assertion macros.
 pub mod assert;
+/// Test authentication helpers.
+pub mod auth;
+/// Test database setup and management.
+pub mod db;
 /// Test data factory functions.
 pub mod factory;
+/// Test HTTP server utilities.
+pub mod http;
