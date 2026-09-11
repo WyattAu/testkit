@@ -1,5 +1,9 @@
 # testkit
 
+[![docs.rs](https://docs.rs/testkit/badge.svg)](https://docs.rs/testkit)
+[![crates.io](https://img.shields.io/crates/v/testkit.svg)](https://crates.io/crates/testkit)
+[![License](https://img.shields.io/badge/license-MIT%2FApache--2.0-blue.svg)](LICENSE)
+
 Shared test utilities for Rust — test databases, HTTP servers, auth helpers, and assertion macros.
 
 ## Features
