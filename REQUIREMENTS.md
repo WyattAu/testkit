@@ -1,9 +1,9 @@
-# Requirements — testkit
+# Requirements: testkit
 
 Numbered, testable requirements. Every requirement maps to at least one named
 test. Threat IDs reference `THREAT-MODEL.md`.
 
-Scope note: `testkit` is a **fixture crate** — shared test utilities:
+Scope note: `testkit` is a **fixture crate**; shared test utilities:
 ephemeral SQLite `TestDb`, axum-based `TestServer`, deterministic auth
 fixtures (`test_jwt`, `test_api_key`), identity generators (`test_email`,
 `test_user_id`, `test_username`), timestamp helpers, and assertion

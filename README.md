@@ -4,15 +4,15 @@
 [![crates.io](https://img.shields.io/crates/v/testkit.svg)](https://crates.io/crates/testkit)
 [![License](https://img.shields.io/badge/license-MIT%2FApache--2.0-blue.svg)](LICENSE)
 
-Shared test utilities for Rust — test databases, HTTP servers, auth helpers, and assertion macros.
+Shared test utilities for Rust; test databases, HTTP servers, auth helpers, and assertion macros.
 
 ## Features
 
-- **TestDb** — Temporary SQLite databases with RAII cleanup
-- **TestServer** — Axum-based HTTP test servers on random ports
-- **Auth helpers** — JWT tokens, API keys, and user ID generation
-- **Assert macros** — `assert_contains!`, `assert_error!`, `assert_ok_eq!`
-- **Factory functions** — Test emails, usernames, and timestamps
+- **TestDb**; Temporary SQLite databases with RAII cleanup
+- **TestServer**; Axum-based HTTP test servers on random ports
+- **Auth helpers**; JWT tokens, API keys, and user ID generation
+- **Assert macros**; `assert_contains!`, `assert_error!`, `assert_ok_eq!`
+- **Factory functions**; Test emails, usernames, and timestamps
 
 ## Installation
 
@@ -47,7 +47,7 @@ async fn main() {
 
 ## Modules
 
-### `db` — Test Database
+### `db`: Test Database
 
 ```rust
 use testkit::db::TestDb;
@@ -57,7 +57,7 @@ db.init_schema("CREATE TABLE items (id INTEGER PRIMARY KEY)").unwrap();
 // Database is automatically cleaned up on drop
 ```
 
-### `http` — Test Server
+### `http`: Test Server
 
 ```rust
 use testkit::http::TestServer;
@@ -67,7 +67,7 @@ server.base_url(); // http://127.0.0.1:PORT
 server.stop().await;
 ```
 
-### `auth` — Authentication
+### `auth`: Authentication
 
 ```rust
 use testkit::auth::{test_jwt, test_api_key, test_user_id};
@@ -77,7 +77,7 @@ let key = test_api_key();               // "test-<uuid>"
 let uid = test_user_id();               // "<uuid>"
 ```
 
-### `assert` — Assertion Macros
+### `assert`: Assertion Macros
 
 ```rust
 use testkit::{assert_contains, assert_error, assert_ok_eq};
@@ -87,7 +87,7 @@ assert_error!(Err::<(), _>("something"));
 assert_ok_eq!(Ok(42), 42);
 ```
 
-### `factory` — Test Data Factories
+### `factory`: Test Data Factories
 
 ```rust
 use testkit::factory::{test_email, test_username, recent_timestamp};
