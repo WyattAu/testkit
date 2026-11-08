@@ -1,0 +1,12 @@
+# testkit
+
+> Shared test utilities for Rust: test databases with RAII cleanup, Axum-based
+> HTTP test servers on random ports, auth helpers, and assertion macros.
+
+## Docs
+
+- [README.md](README.md): test utility semantics, feature list, usage.
+- [REQUIREMENTS.md](REQUIREMENTS.md): numbered requirements REQ-TK-001..200 with test traceability.
+- [THREAT-MODEL.md](THREAT-MODEL.md): threat model and security mitigations.
+- [SECURITY.md](SECURITY.md): security policy.
+- [CHANGELOG.md](CHANGELOG.md): release history.

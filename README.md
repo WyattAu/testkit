@@ -100,3 +100,13 @@ let ts = recent_timestamp();    // 1 hour ago
 ## License
 
 MIT OR Apache-2.0
+
+## Where the truth lives
+
+| Concern | File |
+|---|---|
+| Test utility semantics, usage (normative) | `README.md` |
+| Requirements REQ-TK-001..200 + traceability | `REQUIREMENTS.md` |
+| Threat model | `THREAT-MODEL.md` |
+| Security policy | `SECURITY.md` |
+| Release history | `CHANGELOG.md` |
